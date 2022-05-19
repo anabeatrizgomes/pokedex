@@ -1,17 +1,66 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
+<ion-header [translucent]="true"  >
+  <ion-toolbar color="roxo">
+    <ion-title >
+      Pokedex
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Pokedex</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content [fullscreen]="true"  color="cinza">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="col1">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
+        Bulbasaur
+        <br>
+        <ion-badge color="bulbasaur2">Grass</ion-badge>
+        <ion-badge color="bulbasaur1">Poison</ion-badge>
+        <ion-chip color="light">
+          <ion-label color="success">001</ion-label>
+        </ion-chip>
+
+      </ion-col>
+      <ion-col class="col2">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png">
+       Pikachu
+       <br>
+        <ion-badge color="pikachu">Eletric</ion-badge>
+        <ion-chip class="chip2" color="light">
+          <ion-label color="pikachu">025</ion-label>
+        </ion-chip>
+      </ion-col>
+      </ion-row>
+
+        <ion-row>
+          <ion-col  class="col3">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png">
+            Squirtle
+            <br>
+            <ion-badge color="squirtle">Water</ion-badge>
+            <ion-chip class="chip3" color="light" >
+              <ion-label color="squirtle">007</ion-label>
+            </ion-chip>
+          </ion-col>
+          <ion-col class="col4">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png">
+            Charmander
+            <br>
+            <ion-badge color="charmander">Fire</ion-badge>
+            <ion-chip class="chip4" color="light">
+              <ion-label color="charmander">004</ion-label>
+            </ion-chip>
+          </ion-col>
+          </ion-row>
+          </ion-grid>
+
+
+
+
+
