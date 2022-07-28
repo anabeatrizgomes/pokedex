@@ -11,7 +11,7 @@ export class PokemonService {
   constructor(private http: HttpClient) {}
 
   buscarTodosPokemon(){
-    return this.http.get(this.url);
+    return this.http.get(`${this.url}pokemon`);
     
   }
 }
