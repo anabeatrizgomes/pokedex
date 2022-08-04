@@ -1,5 +1,5 @@
 <ion-header [translucent]="true"  >
-  <ion-toolbar color="roxo">
+  <ion-toolbar color="vermelho">
     <ion-title >
       Pokedex
     </ion-title>
@@ -16,9 +16,10 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col class="col1">
+      <ion-col class="col1" size-xs="12" size-sm="6" *ngFor="let pokemon of listaPokemon">
+
         <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
-        Bulbasaur
+        {{pokemon.name | titlecase}}
         <br>
         <ion-badge color="bulbasaur2">Grass</ion-badge>
         <ion-badge color="bulbasaur1">Poison</ion-badge>
@@ -26,36 +27,7 @@
           <ion-label color="success">001</ion-label>
         </ion-chip>
 
-      </ion-col>
-      <ion-col class="col2">
-        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png">
-       Pikachu
-       <br>
-        <ion-badge color="pikachu">Eletric</ion-badge>
-        <ion-chip class="chip2" color="light">
-          <ion-label color="pikachu">025</ion-label>
-        </ion-chip>
-      </ion-col>
-      </ion-row>
-
-        <ion-row>
-          <ion-col  class="col3">
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png">
-            Squirtle
-            <br>
-            <ion-badge color="squirtle">Water</ion-badge>
-            <ion-chip class="chip3" color="light" >
-              <ion-label color="squirtle">007</ion-label>
-            </ion-chip>
-          </ion-col>
-          <ion-col class="col4">
-            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png">
-            Charmander
-            <br>
-            <ion-badge color="charmander">Fire</ion-badge>
-            <ion-chip class="chip4" color="light">
-              <ion-label color="charmander">004</ion-label>
-            </ion-chip>
+      
           </ion-col>
           </ion-row>
           </ion-grid>
