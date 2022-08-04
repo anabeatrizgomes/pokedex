@@ -1,38 +1,36 @@
-<ion-header [translucent]="true"  >
+<ion-header [translucent]="true">
   <ion-toolbar color="vermelho">
-    <ion-title >
-      Pokedex
-    </ion-title>
+    <ion-title> Pokedex </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Pokedex</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content [fullscreen]="true"  color="cinza">
-
-  <ion-grid>
-    <ion-row>
-      <ion-col class="col1" size-xs="12" size-sm="6" *ngFor="let pokemon of listaPokemon">
-
-        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png">
-        {{pokemon.name | titlecase}}
-        <br>
-        <ion-badge color="bulbasaur2">Grass</ion-badge>
-        <ion-badge color="bulbasaur1">Poison</ion-badge>
-        <ion-chip color="light">
-          <ion-label color="success">001</ion-label>
-        </ion-chip>
-
-      
-          </ion-col>
-          </ion-row>
-          </ion-grid>
-
-
-
-
-
+  <ion-content [fullscreen]="true" color="cinza">
+    <ion-grid>
+      <ion-row>
+        <ion-col
+          class="col1"
+          size-xs="10"
+          size-sm="5"
+          *ngFor="let pokemon of listaPokemon"
+        >
+          <img
+            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+          />
+          {{pokemon.name | titlecase}}
+          <br />
+          <ion-badge color="bulbasaur2">Grass</ion-badge>
+          <ion-badge color="bulbasaur1">Poison</ion-badge>
+          <ion-chip color="light">
+            <ion-label color="success">001</ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content></ion-content
+>
