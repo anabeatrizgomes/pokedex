@@ -13,22 +13,25 @@
   <ion-content [fullscreen]="true" color="cinza">
     <ion-grid>
       <ion-row>
-        <ion-col
-          class="col1"
-          size-xs="10"
-          size-sm="5"
-          *ngFor="let pokemon of listaPokemon"
-        >
-          <img
-            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-          />
-          {{pokemon.name | titlecase}}
-          <br />
-          <ion-badge color="bulbasaur2">Grass</ion-badge>
-          <ion-badge color="bulbasaur1">Poison</ion-badge>
-          <ion-chip color="light">
-            <ion-label color="success">001</ion-label>
-          </ion-chip>
+        <ion-col size="5" *ngFor="let pokemon of listaPokemon">
+          <ion-card [color]="pokemon.types[0].type.name" class="ion-padding">
+            <ion-card-subtitle>
+              <ion-chip color="light">
+                <ion-label color="success">#{{pokemon.id}}</ion-label>
+              </ion-chip>
+            </ion-card-subtitle>
+            <img
+              [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+pokemon.id.toString().padStart(3, '0')+'.png'"
+            />
+            {{pokemon.name | titlecase}}
+            <br />
+            <ion-badge
+              *ngFor="let type of pokemon.types"
+              [color]="type.type.name"
+            >
+              {{type.type.name}}
+            </ion-badge>
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
